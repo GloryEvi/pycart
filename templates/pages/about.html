@@ -1,0 +1,80 @@
+{% extends 'partials/base.html' %} {% load static %} {% load humanize %} {% block content %}
+<div class="gray py-3">
+    <div class="container">
+        <div class="row">
+            <div class="colxl-12 col-lg-12 col-md-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/">Pages</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="middle">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+        
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="abt_caption">
+                    <h2 class="ft-medium mb-4">About Us</h2>
+                    <p class="mb-4">
+                        Welcome to our store — your go-to destination for quality products, exceptional service, and a seamless shopping experience. We believe shopping should be simple, enjoyable, and tailored to your needs.
+                        </p>
+                        <p class="mb-4">
+                        From carefully curated collections to reliable delivery and dedicated customer support, we're here to bring you value in every order. Whether you're shopping for the latest trends or everyday essentials, our team is committed to making your journey smooth and satisfying.
+                        </p>
+                        
+                    <div class="form-group mt-4">
+                        <a href="{% url 'store:shop' %}" class="btn bg-primary rounded btn-sm text-white">Shop Now <i class="fas fa-shopping-cart ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="abt_caption">
+                    <img src="https://thelearningrooms.com/wps/wp-content/uploads/2015/02/team.jpg" class="img-fluid rounded" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="middle">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="abt_caption">
+                    <img src="https://media.istockphoto.com/id/1434742171/photo/laptop-ppt-presentation-business-meeting-and-team-working-on-review-for-new-digital-website.jpg?s=612x612&w=0&k=20&c=MA7DEVo4nFIJPXgERQQx-W5srlaMThr_aFtDRaHeB00=" class="img-fluid rounded" alt="" />
+                </div>
+            </div>
+            
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="abt_caption">
+                    <h2 class="ft-medium mb-4">Our Mission & Vision</h2>
+                    <p class="mb-4">
+                        <strong>Our Mission:</strong>  
+                        To provide customers with high-quality, affordable products through a seamless and enjoyable online shopping experience. We are committed to delivering value, reliability, and excellent service with every order.
+                        </p>
+                        
+                        <p class="mb-4">
+                        <strong>Our Vision:</strong>  
+                        To become a trusted name in eCommerce by setting new standards for convenience, customer satisfaction, and innovation. We aim to build a global community where shopping is simple, secure, and centered around our customers' evolving needs.
+                        </p>
+                        
+                    <div class="form-group mt-4">
+                        <a href="{% url 'store:faqs' %}" class="btn bg-primary rounded btn-sm text-white">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}

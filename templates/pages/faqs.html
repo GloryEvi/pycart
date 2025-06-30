@@ -1,0 +1,130 @@
+{% extends 'partials/base.html' %} {% load static %} {% load humanize %} {% block content %}
+<div class="gray py-3">
+    <div class="container">
+        <div class="row">
+            <div class="colxl-12 col-lg-12 col-md-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/">Pages</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">FAQ's</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="middle">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="sec_title position-relative text-center">
+                    <h3 class="ft-bold pt-3">Frequently Asked Questions</h3>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row align-items-center justify-content-between">
+            <div class="col-xl-12">
+                <div class="d-block position-relative border rounded py-3 px-3 mb-4">
+                    <h4 class="ft-medium mb-3">Orders & Payment:</h4>
+                    <div id="accordion" class="accordion">
+                        <div class="card">
+                            <div class="card-header" id="h1">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#ord1" aria-expanded="true" aria-controls="ord1">
+                                        What payment methods do you accept?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="ord1" class="collapse show" aria-labelledby="h1" data-parent="#accordion">
+                                <div class="card-body">
+                                    We accept all major credit cards (Visa, MasterCard, American Express), PayPal, Apple Pay, Google Pay, and bank transfers. All payments are processed securely through encrypted connections and we never store your payment information on our servers.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="h2">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ord2" aria-expanded="false" aria-controls="ord2">
+                                        How can I track my order?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="ord2" class="collapse" aria-labelledby="h2" data-parent="#accordion">
+                                <div class="card-body">
+                                    Once your order ships, you'll receive a confirmation email with a tracking number. You can track your package by visiting our "Track Order" page and entering your order number, or by clicking the tracking link in your shipping confirmation email. You can also log into your account to view all order statuses.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="h3">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ord3" aria-expanded="false" aria-controls="ord3">
+                                        Can I use discount codes and coupons?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="ord3" class="collapse" aria-labelledby="h3" data-parent="#accordion">
+                                <div class="card-body">
+                                    Yes! You can apply discount codes at checkout by entering them in the "Promo Code" field. Codes can be found in our newsletter, promotional emails, or special offers. Please note that only one discount code can be used per order, and some restrictions may apply to certain products or sale items.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="h4">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ord4" aria-expanded="false" aria-controls="ord4">
+                                        How long does shipping take?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="ord4" class="collapse" aria-labelledby="h4" data-parent="#accordion">
+                                <div class="card-body">
+                                    Standard shipping typically takes 3-7 business days within the continental US. Express shipping (1-2 business days) and overnight shipping options are also available at checkout. International shipping times vary by destination but generally take 7-14 business days. Orders placed before 2 PM EST on weekdays are processed the same day.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="h5">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ord5" aria-expanded="false" aria-controls="ord5">
+                                        Is my personal information secure during checkout?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="ord5" class="collapse" aria-labelledby="h5" data-parent="#accordion">
+                                <div class="card-body">
+                                    Absolutely. Our checkout process uses 256-bit SSL encryption to protect your personal and payment information. We are PCI DSS compliant and follow industry best practices for data security. Your information is never shared with third parties for marketing purposes, and we regularly update our security measures to ensure your data remains protected.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="h6">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ord6" aria-expanded="false" aria-controls="ord6">
+                                        What is your return policy?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="ord6" class="collapse" aria-labelledby="h6" data-parent="#accordion">
+                                <div class="card-body">
+                                    We offer a 30-day return policy for most items in their original condition with tags attached. Items must be returned in their original packaging. To initiate a return, visit our Returns Center or contact customer service. Refunds are processed within 5-7 business days after we receive your return. Note that shipping costs are non-refundable unless the return is due to our error.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+{% endblock content %}
