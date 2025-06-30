@@ -525,3 +525,5 @@ CKEDITOR_5_CONFIGS = {
         },
     },
 }
+
+FORCE_SERVE_STATIC = True
