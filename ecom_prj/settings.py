@@ -34,7 +34,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
-CSRF_TRUSTED_ORIGINS = ['https://fastcart.up.railway.app', 'http://127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://*.up.railway.app', 'http://127.0.0.1:8000']
 
 
 # Application definition
@@ -107,10 +107,10 @@ ANYMAIL = {
     "MAILGUN_SENDER_DOMAIN": os.environ.get("MAILGUN_SENDER_DOMAIN"),
 }
 
-FROM_EMAIL=env("FROM_EMAIL")
-EMAIL_BACKEND=env("EMAIL_BACKEND")
-DEFAULT_FROM_EMAIL=env("DEFAULT_FROM_EMAIL")
-SERVER_EMAIL=env("SERVER_EMAIL")
+# FROM_EMAIL=env("FROM_EMAIL")
+# EMAIL_BACKEND=env("EMAIL_BACKEND")
+# DEFAULT_FROM_EMAIL=env("DEFAULT_FROM_EMAIL")
+# SERVER_EMAIL=env("SERVER_EMAIL")
 
 
 
