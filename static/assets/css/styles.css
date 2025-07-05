@@ -2938,11 +2938,13 @@ span.expiration {
 }
 
 @media (max-width: 992px) {
+
     .navigation-portrait .nav-brand {
         margin-left: 25px;
     }
     .mobile_nav {
         margin-top: 4px;
+        background-color: #CECECE;
     }
     .nav-brand img {
         max-width: 110px;
@@ -2955,9 +2957,11 @@ span.expiration {
     }
     .nav-header {
         width: 100%;
+        background-color: #CECECE;
     }
     .navigation-portrait .nav-brand {
         flex: 1;
+        
     }
     .mobile_nav ul {
         display: inline-block;
@@ -6413,3 +6417,5 @@ footer.skin-dark-footer ul.footer-bottom-social li a:focus {
     background-color: #ffffff;
     color: #333c56;
 }
+
+

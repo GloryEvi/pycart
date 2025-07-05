@@ -10,13 +10,17 @@ from django.conf import settings
 import requests
 from django.views.decorators.csrf import csrf_exempt
 from django.template.loader import render_to_string
-from django.core.mail import EmailMultiAlternatives
+# from django.core.mail import EmailMultiAlternatives
 import stripe
 from plugin.exchange_rate import convert_usd_to_inr,convert_usd_to_kobo,convert_usd_to_ngn
 from django.core.paginator import Paginator
 
 from userauths import models as userauths_models
 from django.db.models import Q
+
+
+
+
 
 
 
@@ -274,6 +278,12 @@ def delete_cart_item(request):
 
         
 def create_order(request):
+
+    # Add authentication check FIRST
+    if not request.user.is_authenticated:
+        messages.info(request, "Please sign in to proceed with checkout.")
+        return redirect('userauths:sign-in')
+
     if request.method == "POST":
         address_id = request.POST.get("address")
         if not address_id:
@@ -326,6 +336,8 @@ def create_order(request):
     
     return redirect("store:checkout", order.order_id)
 
+
+
 def checkout(request, order_id):
     order = store_models.Order.objects.get(order_id=order_id)
 
@@ -345,6 +357,10 @@ def checkout(request, order_id):
 
     }
     return render(request, "store/checkout.html", context)
+
+
+
+
 
 def coupon_apply(request, order_id):
     # print("Order Id ========", order_id)
